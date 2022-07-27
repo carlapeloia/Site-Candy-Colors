@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /*Geral*/
+  --color-white: #FFFFFF;
+  --color-back: #23232E;
+  --color-nav: #bbb1a6;
+  /*#c5b5a3*/
+  --color-sombra-verde: #97af7e;
+
+  /*Textos*/
+  --color-text1:#3d3734;
+
+  /*Sessões*/
+  --color-aves: #e5fdcd;
+  --color-peixes: #f8d5d1;
+  --color-caes: #cde6e9;
+  --color-gatos: #fac4ae;
+
+  /*Links*/
+  --color-aves-a:#47533b;
+  --color-peixes-a: #6e1747;
+  --color-caes-a: #344446;
+  --color-gatos-a: #813d22;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-family: 'Indie Flower', cursive;
+  /*font-family: 'Edu TAS Beginner', cursive;*/
+}
+
+#logo:hover {
+  /*Animação: a imagem do logo pulsa*/
+  animation: pulsando 1s linear 0s infinite;
+}
+@keyframes pulsando {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  30% {
+    transform: scale(1.1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  70% {
+    transform: scale(1.1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+
+nav {
+  background-color: var(--color-nav);
+  font-weight: bold;
+  font-size: 1.4rem;
+  height: 60px;
+  color: var(--color-text1);
+  /*color: #746963;*/
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 5px var(--color-aves-a);
+  /*#2b2a2a*/
+}
+
+nav, ul {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+}
+
+/*li:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  font-size: 1.5rem;
+}*/
+
+li:hover {
+  color: var(--color-gatos);
+  text-shadow: 1px 1px var(--color-peixes);
+  font-size: 1.5rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+main h1 {
+  text-align: center;
+  text-shadow: 1px 1.5px var(--color-sombra-verde);
+  color: var(--color-aves-a);
+  padding: 10px;
+  margin: 0;
+  margin-top: 4px;
+  /*border: 1px solid var(--color-aves-a)*/
+}
+
+.comum {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.comum a:hover {
+  font-size: 1.6rem;
+  color: var(--color-text1);
+  opacity: 0.8;
+}
+
+.aves {
+  background-image: linear-gradient(to right, var(--color-white), var(--color-aves));
+  padding-right: 20px;
+  justify-content: end;
+  border: 1px solid var(--color-aves-a)
+}
+
+img {
+  height: 40px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.aves a {
+  color: var(--color-aves-a);
+}
+
+.peixes {
+  background-image: linear-gradient(to left, var(--color-white), var(--color-peixes));
+  padding-left: 20px;
+  justify-content: start;
+  border: 1px solid var(--color-aves-a)
+}
+
+.peixes a {
+  color: var(--color-peixes-a);
+  /*#574745*/
+}
+
+.caes {
+  background-image: linear-gradient(to right, var(--color-white), var(--color-caes));
+  padding-right: 20px;
+  justify-content: end;
+  border: 1px solid var(--color-aves-a)
+}
+
+.caes a {
+  color: var(--color-caes-a);
+  /*#382e2c*/
+}
+
+.gatos {
+  background-image: linear-gradient(to left, var(--color-white), var(--color-gatos));
+  /*#ffb394;*/
+  padding-left: 20px;
+  justify-content: start;
+  border: 1px solid var(--color-aves-a)
+}
+
+.gatos a {
+  color: var(--color-gatos-a);;
+  /*#694a3e*/
+}
+
+footer {
+  height: 50px;
+  background-color: var(--color-nav);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer {
+  color: var(--color-text1);
+  font-weight: bold;
+}
+
+footer a {
+  color: var(--color-text1);
+  text-shadow: 1px 1px var(--color-caes-a);
+}
+
+footer a:hover {
+  color: var(--color-gatos);
+}
+
+
+
+/* Chamadas de fontes do CSS
+font-family: 'Edu TAS Beginner', cursive;
+font-family: 'Edu VIC WA NT Beginner', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Quicksand', sans-serif;
+*/
