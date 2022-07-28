@@ -5,14 +5,14 @@
 
 :root {
   /*Geral*/
-  --color-white: #FFFFFF;
-  --color-back: #23232E;
+  --color-white: #ffffff;
+  --color-back: #23232e;
   --color-nav: #bbb1a6;
-  /*#c5b5a3*/
+  --color-section: #bbb1a62a;
   --color-sombra-verde: #97af7e;
 
   /*Textos*/
-  --color-text1:#3d3734;
+  --color-text1: #3d3734;
 
   /*Sessões*/
   --color-aves: #e5fdcd;
@@ -21,21 +21,25 @@
   --color-gatos: #fac4ae;
 
   /*Links*/
-  --color-aves-a:#47533b;
+  --color-aves-a: #47533b;
   --color-peixes-a: #6e1747;
   --color-caes-a: #344446;
   --color-gatos-a: #813d22;
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
   display: flex;
   flex-direction: column;
+  font-family: 'Quicksand', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 .logo {
   font-family: 'Indie Flower', cursive;
-  /*font-family: 'Edu TAS Beginner', cursive;*/
 }
 
 #logo:hover {
@@ -60,22 +64,20 @@ body {
   }
 }
 
-
 nav {
-  background-color: var(--color-nav);
-  font-weight: bold;
-  font-size: 1.4rem;
   height: 60px;
-  color: var(--color-text1);
-  /*color: #746963;*/
   padding: 20px;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--color-nav);
   box-shadow: 0px 2px 5px var(--color-aves-a);
-  /*#2b2a2a*/
+  color: var(--color-text1);
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 
-nav, ul {
+nav,
+ul {
   display: flex;
 }
 
@@ -88,36 +90,45 @@ li {
   padding: 10px;
 }
 
-/*li:hover {
-  cursor: pointer;
-  opacity: 0.7;
-  font-size: 1.5rem;
-}*/
-
 li:hover {
   color: var(--color-gatos);
-  text-shadow: 1px 1px var(--color-peixes);
   font-size: 1.5rem;
+  text-shadow: 1px 1px var(--color-peixes);
 }
 
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2px;
 }
 
-main h1 {
-  text-align: center;
-  text-shadow: 1px 1.5px var(--color-sombra-verde);
-  color: var(--color-aves-a);
-  padding: 10px;
+main h1,
+h2,
+#topo {
   margin: 0;
   margin-top: 4px;
-  /*border: 1px solid var(--color-aves-a)*/
+  padding: 10px;
+  color: var(--color-aves-a);
+  text-align: center;
+  text-shadow: 1px 1.5px var(--color-sombra-verde);
+}
+
+h2 {
+  color: var(--color-text1);
+}
+
+#link-topo {
+  height: 1px;
+  width: 1px;
+  margin: 0;
+  padding: 0;
+  color: var(--color-nav);
 }
 
 .comum {
   height: 100px;
+  width: 98%;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -126,16 +137,20 @@ main h1 {
 }
 
 .comum a:hover {
-  font-size: 1.6rem;
   color: var(--color-text1);
+  font-size: 1.6rem;
   opacity: 0.8;
 }
 
 .aves {
-  background-image: linear-gradient(to right, var(--color-white), var(--color-aves));
-  padding-right: 20px;
   justify-content: end;
-  border: 1px solid var(--color-aves-a)
+  padding-right: 20px;
+  border: 1px solid var(--color-aves-a);
+  background-image: linear-gradient(
+    to right,
+    var(--color-white),
+    var(--color-aves)
+  );
 }
 
 img {
@@ -151,54 +166,99 @@ a {
 }
 
 .peixes {
-  background-image: linear-gradient(to left, var(--color-white), var(--color-peixes));
-  padding-left: 20px;
   justify-content: start;
-  border: 1px solid var(--color-aves-a)
+  padding-left: 20px;
+  border: 1px solid var(--color-aves-a);
+  background-image: linear-gradient(
+    to left,
+    var(--color-white),
+    var(--color-peixes)
+  );
 }
 
 .peixes a {
   color: var(--color-peixes-a);
-  /*#574745*/
 }
 
 .caes {
-  background-image: linear-gradient(to right, var(--color-white), var(--color-caes));
-  padding-right: 20px;
   justify-content: end;
-  border: 1px solid var(--color-aves-a)
+  padding-right: 20px;
+  border: 1px solid var(--color-aves-a);
+  background-image: linear-gradient(
+    to right,
+    var(--color-white),
+    var(--color-caes)
+  );
 }
 
 .caes a {
   color: var(--color-caes-a);
-  /*#382e2c*/
 }
 
 .gatos {
-  background-image: linear-gradient(to left, var(--color-white), var(--color-gatos));
-  /*#ffb394;*/
-  padding-left: 20px;
   justify-content: start;
-  border: 1px solid var(--color-aves-a)
+  padding-left: 20px;
+  border: 1px solid var(--color-aves-a);
+  background-image: linear-gradient(
+    to left,
+    var(--color-white),
+    var(--color-gatos)
+  );
 }
 
 .gatos a {
-  color: var(--color-gatos-a);;
-  /*#694a3e*/
+  color: var(--color-gatos-a);
+}
+
+section {
+  margin-bottom: 2px;
+  width: 90%;
+}
+
+.div-section {
+  height: auto;
+  padding: 10px;
+  background-color: var(--color-section);
+  border: 1px solid var(--color-aves-a);
+  box-shadow: 2px 2px 10px var(--color-nav);
+  text-align: justify;
+}
+
+.titulo-section {
+  padding: 6px 0 4px 0;
+  color: var(--color-gatos-a);
+  text-shadow: 1px 1px var(--color-nav);
+}
+
+p {
+  padding: 4px;
+  text-indent: 1em;
+}
+
+#topo {
+  margin: 10px 0;
+}
+
+#topo a {
+  color: var(--color-text1);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#topo a:hover {
+  color: var(--color-gatos);
+  text-shadow: 1px 1px var(--color-peixes);
+  font-size: 1.4rem;
 }
 
 footer {
   height: 50px;
-  background-color: var(--color-nav);
+  width: 100%;
+  padding: 25px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-footer {
+  background-color: var(--color-nav);
   color: var(--color-text1);
   font-weight: bold;
 }
@@ -210,9 +270,9 @@ footer a {
 
 footer a:hover {
   color: var(--color-gatos);
+  text-shadow: 1px 1px var(--color-peixes);
+  font-size: 1.1rem;
 }
-
-
 
 /* Chamadas de fontes do CSS
 font-family: 'Edu TAS Beginner', cursive;
@@ -221,3 +281,19 @@ font-family: 'Indie Flower', cursive;
 font-family: 'Poppins', sans-serif;
 font-family: 'Quicksand', sans-serif;
 */
+
+/*Algumas cores para guardar
+  #694a3e
+  #c5b5a3
+  #746963
+  #2b2a2a
+  #574745
+  #382e2c
+  #ffb394
+*/
+
+/*li:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  font-size: 1.5rem;
+}*/
