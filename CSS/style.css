@@ -86,11 +86,12 @@ ul {
   padding: 0;
 }
 
-li {
+nav ul li a {
+  color: var(--color-text1);
   padding: 10px;
 }
 
-li:hover {
+nav ul li a:hover {
   color: var(--color-gatos);
   font-size: 1.5rem;
   text-shadow: 1px 1px var(--color-peixes);
@@ -101,6 +102,10 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 2px;
+}
+
+.txt-center {
+  text-align: center;
 }
 
 main h1,
@@ -233,6 +238,7 @@ section {
 p {
   padding: 4px;
   text-indent: 1em;
+  margin: 4px;
 }
 
 #topo {
@@ -273,6 +279,22 @@ footer a:hover {
   text-shadow: 1px 1px var(--color-peixes);
   font-size: 1.1rem;
 }
+
+.sobre h1 {
+  border: 1px solid var(--color-caes-a); 
+}
+
+.link-indicacao {
+  color: var(--color-caes-a);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.link-indicacao:hover {
+  color: var(--color-sombra-verde);
+  text-shadow: 1px 1px var(--color-peixes);
+}
+
 
 /* Chamadas de fontes do CSS
 font-family: 'Edu TAS Beginner', cursive;
